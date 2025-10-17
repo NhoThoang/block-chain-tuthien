@@ -1,0 +1,121 @@
+title: "Dự án: COIN TỪ THIỆN MINH BẠCH"
+name: "VNDCoin"
+tagline: "Mỗi đồng coin = một hành động tốt được ghi mãi trong blockchain"
+slug: "coin-tu-thien-minh-bach"
+last_updated: "2025-10-17"
+summary: >-
+  VNDCoin là nền tảng quyên góp minh bạch dùng token để biểu diễn mỗi đóng góp.
+  Mỗi giao dịch, bằng chứng chi tiêu và hành trình của tiền đều có thể truy xuất công khai.
+
+sections:
+  - id: hero
+    title: "COIN TỪ THIỆN MINH BẠCH"
+    subtitle: "Mỗi đồng coin = một hành động tốt được ghi mãi trong blockchain"
+    title: "Dự án: COIN TỪ THIỆN MINH BẠCH"
+    name: "VNDCoin"
+    tagline: "Mỗi đồng coin = một hành động tốt được ghi mãi trong blockchain"
+    slug: "coin-tu-thien-minh-bach"
+    last_updated: "2025-10-17"
+    summary: >-
+      VNDCoin là nền tảng quyên góp minh bạch dùng token để biểu diễn mỗi đóng góp.
+      Mỗi giao dịch, bằng chứng chi tiêu và hành trình của tiền đều có thể truy xuất công khai.
+
+    sections:
+      - id: hero
+        title: "COIN TỪ THIỆN MINH BẠCH"
+        subtitle: "Mỗi đồng coin = một hành động tốt được ghi mãi trong blockchain"
+        body: |-
+          Bạn đã bao giờ quyên góp mà không biết tiền mình đi đâu chưa?
+          Nhiều quỹ từ thiện thiếu minh bạch khiến lòng tốt bị hoài nghi.
+          VNDCoin ra đời để giải quyết vấn đề này bằng công nghệ blockchain.
+
+      - id: problem
+        title: "Vấn đề hiện tại"
+        body: |-
+          - Quyên góp đôi khi thiếu minh bạch, khó kiểm chứng.
+          - Người ủng hộ không biết tiền được sử dụng như thế nào.
+          - Tin tưởng mù quáng dẫn tới nghi ngờ và giảm động lực đóng góp.
+
+      - id: solution
+        title: "Giải pháp của chúng tôi"
+        body: |-
+          - VNDCoin: mỗi đóng góp được biểu diễn bằng một token có thể kiểm chứng.
+          - Kết hợp off-chain (để tiết kiệm phí) và on-chain (để ghi nhận cuối cùng).
+          - Khi chi tiêu, token được burn kèm bằng chứng (hóa đơn, hình ảnh, video, báo cáo).
+
+      - id: why-blockchain
+        title: "Vì sao dùng Blockchain?"
+        bullets:
+          - "Không ai có thể sửa hoặc xóa dữ liệu: mọi giao dịch (mint, burn, giải ngân...) được ghi công khai."
+          - "Ai cũng có thể kiểm chứng: dùng địa chỉ ví để truy xuất luồng tiền."
+          - "Giảm sự phụ thuộc vào lời hứa: bằng chứng là trên mạng lưới công khai."
+
+      - id: workflow
+        title: "Cách hoạt động (ĐƠN GIẢN — MINH BẠCH — TIẾT KIỆM PHÍ)"
+        steps:
+          - title: "Ghi nhận off-chain ngay lập tức"
+            description: |-
+              Khi bạn ủng hộ, hệ thống ghi nhận off-chain (tạo VNDCoin 'dự kiến', lưu chữ ký số và tham chiếu KYC).
+              Người ủng hộ thấy ngay số dư trong ví thiện nguyện.
+
+          - title: "Gom và xử lý on-chain khi phù hợp"
+            description: |-
+              Cuối ngày hoặc khi phí gas thấp, hệ thống gom giao dịch và gọi smart contract để mint/burn.
+              Phương án này giảm chi phí so với xử lý từng giao dịch on-chain.
+
+          - title: "Chi trả kèm minh chứng"
+            description: |-
+              Khi quỹ chi trả cho hoạt động, token tương ứng được burn công khai và kèm liên kết tới bằng chứng.
+
+      - id: anonymity
+        title: "Ẩn danh — nhưng xác thực"
+        body: |-
+          Người ủng hộ có thể chọn ẩn danh (ví dụ: 'Người Ẩn Danh #52').
+          Hệ thống vẫn thực hiện KYC nội bộ và lưu bằng chứng xác thực; thông tin cá nhân không được public.
+
+      - id: tech
+        title: "Công nghệ chính"
+        table:
+          - name: "Blockchain (Ethereum L2 / Polygon)"
+            role: "Lưu dấu vết giao dịch công khai"
+          - name: "Smart Contract (ERC-20 mở rộng)"
+            role: "Đảm bảo coin chỉ được đúc/burn hợp lệ"
+          - name: "AI Giám sát"
+            role: "Phát hiện hành vi gian lận hoặc mint bất hợp pháp"
+          - name: "KYC + eSignature"
+            role: "Xác thực danh tính người ủng hộ"
+          - name: "Mã hóa AES-256 + SSL"
+            role: "Bảo vệ dữ liệu cá nhân"
+
+      - id: benefits
+        title: "Lợi ích cho người dùng"
+        items:
+          - title: "Minh bạch tuyệt đối"
+            desc: "Mọi đồng tiền đều có hành trình rõ ràng."
+          - title: "Ai cũng kiểm chứng được"
+            desc: "Không phụ thuộc vào tổ chức hay cá nhân."
+          - title: "Tôn vinh người tốt"
+            desc: "Nhận NFT chứng nhận lòng tốt, không thể làm giả."
+          - title: "Ẩn danh xác thực"
+            desc: "Bảo vệ người ủng hộ, vẫn đảm bảo tính minh bạch."
+
+      - id: vision
+        title: "Tầm nhìn"
+        body: |-
+          Chúng tôi không tạo coin để đầu cơ — mà là đưa đạo đức và lòng tốt lên blockchain, nơi không thể bị nghi ngờ.
+
+    media:
+      proof_types:
+        - invoice
+        - photo
+        - video
+        - report
+
+    recommendations:
+      - "Thêm trường 'evidence' (URL hoặc path tới ảnh/video/report) cho mỗi giao dịch khi render web."
+      - "Thêm 'cta' (call-to-action) với link quyên góp và tài liệu kỹ thuật cho devs."
+      - "Sử dụng markdown rendering trên site để hiển thị các sections dài."
+
+    contact:
+      email: "contact@vndcoin.example"
+      website: "https://example.org"
