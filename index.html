@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VNDCoin – Coin Từ Thiện Minh Bạch & Hiện Đại</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="coin-loader">
+        <div class="coin"></div>
+        <div class="coin-shadow"></div>
+      </div>
+      <h3>Đang tải VNDCoin...</h3>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-coins" aria-hidden="true"></i>
+        <span>VNDCoin</span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Trang chủ</a>
+        <a href="#flow" class="nav-link">Quy trình</a>
+        <a href="#benefits" class="nav-link">Lợi ích</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Liên hệ</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" role="banner">
+    <div class="hero-background">
+      <div class="floating-coins">
+        <div class="coin-float coin-1">🪙</div>
+        <div class="coin-float coin-2">💰</div>
+        <div class="coin-float coin-3">💎</div>
+        <div class="coin-float coin-4">⭐</div>
+        <div class="coin-float coin-5">🌟</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <i class="fas fa-heart"></i>
+            <span>Blockchain cho lòng tốt</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="gradient-text">VNDCoin</span>
+            <br>
+            <span class="subtitle">Coin Từ Thiện Minh Bạch</span>
+          </h1>
+          <p class="hero-description">
+            Mỗi đồng tiền là một hành động tốt được ghi mãi trong blockchain. 
+            Minh bạch, truy xuất và nhân văn trong từng giao dịch.
+          </p>
+          <div class="hero-buttons">
+            <a href="#flow" class="btn btn-primary">
+              <i class="fas fa-play"></i>
+              Tìm hiểu ngay
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-users"></i>
+              Tham gia cộng đồng
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="100">0</div>
+              <div class="stat-label">% Minh bạch</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="95">0</div>
+              <div class="stat-label">% Tiết kiệm phí</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="24">0</div>
+              <div class="stat-label">/7 Hỗ trợ</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="card-title">Blockchain Security</div>
+            </div>
+            <div class="card-content">
+              <div class="transaction-flow">
+                <div class="flow-step">
+                  <div class="step-icon">💵</div>
+                  <div class="step-text">Nạp VNĐ</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                  <div class="step-icon">🪙</div>
+                  <div class="step-text">Mint Coin</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">
+                  <div class="step-icon">📜</div>
+                  <div class="step-text">Ghi nhận</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flow Section -->
+  <section id="flow" class="flow-section" role="main">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fas fa-cogs"></i>
+          <span>Quy trình hoạt động</span>
+        </div>
+        <h2 class="section-title">Quy trình minh bạch của VNDCoin</h2>
+        <p class="section-description">
+          Từ giao dịch off-chain đến on-chain, mọi bước đều được ghi nhận và minh bạch
+        </p>
+      </div>
+      
+      <div class="flow-timeline">
+        <div class="timeline-line"></div>
+        <div class="flow-cards">
+          <div class="flow-card" data-step="1">
+            <div class="card-number">01</div>
+            <div class="card-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3>Nạp VNĐ</h3>
+            <p>Ghi nhận giao dịch off-chain ngay khi người dùng nạp tiền vào ví nội bộ với tốc độ nhanh chóng.</p>
+            <div class="card-features">
+              <span class="feature-tag">Real-time</span>
+              <span class="feature-tag">Instant</span>
+            </div>
+          </div>
+          
+          <div class="flow-card" data-step="2">
+            <div class="card-number">02</div>
+            <div class="card-icon">
+              <i class="fas fa-coins"></i>
+            </div>
+            <h3>Mint/Burn Off-chain</h3>
+            <p>Giao dịch nội bộ giữa người dùng & quỹ, tối ưu chi phí, nhanh chóng và hiệu quả.</p>
+            <div class="card-features">
+              <span class="feature-tag">Low Cost</span>
+              <span class="feature-tag">Fast</span>
+            </div>
+          </div>
+          
+          <div class="flow-card" data-step="3">
+            <div class="card-number">03</div>
+            <div class="card-icon">
+              <i class="fas fa-moon"></i>
+            </div>
+            <h3>Gom & On-chain</h3>
+            <p>Cuối ngày, tổng hợp giao dịch → mint/burn trên blockchain tiết kiệm phí ~90–95%.</p>
+            <div class="card-features">
+              <span class="feature-tag">Batch</span>
+              <span class="feature-tag">Efficient</span>
+            </div>
+          </div>
+          
+          <div class="flow-card" data-step="4">
+            <div class="card-number">04</div>
+            <div class="card-icon">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <h3>Giải ngân minh bạch</h3>
+            <p>Quỹ chi trả người nhận → burn coin kèm bằng chứng công khai trên blockchain.</p>
+            <div class="card-features">
+              <span class="feature-tag">Transparent</span>
+              <span class="feature-tag">Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fas fa-star"></i>
+          <span>Lợi ích & Công nghệ</span>
+        </div>
+        <h2 class="section-title">Tại sao chọn VNDCoin?</h2>
+        <p class="section-description">
+          Công nghệ blockchain tiên tiến kết hợp với AI để tạo ra hệ thống từ thiện minh bạch nhất
+        </p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Minh bạch tuyệt đối</h3>
+          <p>Ai cũng kiểm chứng được dòng tiền, không thể gian lận hay sửa đổi. Mọi giao dịch đều công khai trên blockchain.</p>
+        </div>
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Ẩn danh có xác thực</h3>
+          <p>Bảo vệ danh tính người ủng hộ nhưng vẫn xác minh hợp lệ thông qua hệ thống KYC thông minh.</p>
+        </div>
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>AI chống gian lận</h3>
+          <p>Giám sát real-time mọi hành vi bất thường với công nghệ machine learning tiên tiến.</p>
+        </div>
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Bảo mật dữ liệu</h3>
+          <p>Mã hóa AES-256 + SSL/TLS 1.3, không lưu danh tính trực tiếp trên blockchain.</p>
+        </div>
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-icon">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3>Off-chain → On-chain</h3>
+          <p>Giao dịch nội bộ nhanh, chi phí thấp nhưng vẫn minh bạch 100% thông qua batch processing.</p>
+        </div>
+        
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>NFT minh chứng</h3>
+          <p>Mỗi người nhận NFT chứng nhận lòng tốt – chỉ giá trị tinh thần & xã hội, không có giá trị thương mại.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fas fa-question-circle"></i>
+          <span>Hỏi đáp</span>
+        </div>
+        <h2 class="section-title">Câu hỏi thường gặp</h2>
+        <p class="section-description">
+          Những thắc mắc phổ biến về VNDCoin và cách thức hoạt động
+        </p>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Tại sao phải dùng blockchain?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Để ghi lại mọi giao dịch công khai, không thể sửa đổi, mọi người đều kiểm chứng được dòng tiền. Blockchain đảm bảo tính minh bạch và tin cậy tuyệt đối.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Tại sao không mint/burn trực tiếp mỗi lần?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>On-chain mỗi giao dịch tốn phí cao. Off-chain trước, gom lại mint/burn 1 lần/ngày → tiết kiệm ~90–95% phí nhưng vẫn minh bạch hoàn toàn.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Tôi có thể ẩn danh không?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Có. Blockchain chỉ lưu hash danh tính, hệ thống nội bộ vẫn xác minh hợp lệ thông qua KYC nhưng thông tin cá nhân được bảo vệ tuyệt đối.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Làm sao đảm bảo tính bảo mật?</h4>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Hệ thống sử dụng mã hóa AES-256, SSL/TLS 1.3, AI chống gian lận, và smart contract đã được audit bởi các tổ chức uy tín.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fas fa-handshake"></i>
+          <span>Liên hệ</span>
+        </div>
+        <h2 class="section-title">Tham gia cộng đồng VNDCoin</h2>
+        <p class="section-description">
+          Hãy cùng chúng tôi xây dựng nền tảng từ thiện minh bạch cho Việt Nam
+        </p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <p>contact@vndcoin.org</p>
+            <a href="mailto:contact@vndcoin.org" class="contact-link">Gửi email</a>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h4>GitHub</h4>
+            <p>Sẽ công bố sau giai đoạn audit</p>
+            <span class="contact-status">Coming Soon</span>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Cộng đồng</h4>
+            <p>Tham gia thảo luận và đóng góp ý tưởng</p>
+            <a href="#" class="contact-link">Tham gia ngay</a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h4>Gửi tin nhắn cho chúng tôi</h4>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Tên của bạn" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Tin nhắn của bạn" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Gửi tin nhắn
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <i class="fas fa-coins"></i>
+            <span>VNDCoin</span>
+          </div>
+          <p>Blockchain cho lòng tốt - Minh bạch, truy xuất, nhân văn</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h5>Sản phẩm</h5>
+            <a href="#flow">Quy trình</a>
+            <a href="#benefits">Lợi ích</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          
+          <div class="footer-column">
+            <h5>Cộng đồng</h5>
+            <a href="#contact">Liên hệ</a>
+            <a href="#">GitHub</a>
+            <a href="#">Discord</a>
+          </div>
+          
+          <div class="footer-column">
+            <h5>Pháp lý</h5>
+            <a href="#">Điều khoản</a>
+            <a href="#">Bảo mật</a>
+            <a href="#">Chính sách</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 VNDCoin Charity Project — Open for Good.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

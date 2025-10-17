@@ -1,0 +1,66 @@
+🌍 DỰ ÁN “COIN TỪ THIỆN MINH BẠCH”
+
+Mỗi đồng coin = một hành động tốt được ghi mãi trong blockchain ❤️
+
+Bạn đã bao giờ quyên góp mà không biết tiền mình đi đâu chưa?
+Hoặc từng thấy những quỹ từ thiện “mập mờ”, khiến lòng tốt của bạn bị nghi ngờ?
+
+👉 Chúng tôi tạo ra VNDCoin – Coin Từ Thiện Minh Bạch,
+nơi mỗi đồng tiền đều có dấu vết thật, không thể xoá hay làm giả.
+
+💡 VÌ SAO PHẢI LÀ BLOCKCHAIN?
+
+1️⃣ Không ai có thể sửa hay xóa dữ liệu
+Mỗi giao dịch (mint, burn, giải ngân...) được ghi vào blockchain — minh bạch tuyệt đối, ngay cả chúng tôi cũng không thể can thiệp.
+
+2️⃣ Ai cũng có thể kiểm chứng
+Bạn chỉ cần địa chỉ ví → có thể xem toàn bộ luồng tiền: từ lúc bạn ủng hộ đến khi được sử dụng.
+
+3️⃣ Không còn “tin tưởng mù quáng”
+Bạn không cần tin vào lời hứa — bạn tự nhìn thấy bằng chứng trên mạng lưới công khai.
+
+⚙️ CÁCH HOẠT ĐỘNG (ĐƠN GIẢN – MINH BẠCH – TIẾT KIỆM PHÍ)
+🪙 Giao dịch off-chain trước – on-chain sau
+
+Để giảm chi phí blockchain (gas fee), dự án sử dụng cơ chế kép:
+
+1️⃣ Khi bạn ủng hộ 1.000.000 VNĐ, hệ thống ghi nhận off-chain (nội bộ):
+→ tạo 1.000.000 VNDCoin “dự kiến”, gắn danh tính & chữ ký số của bạn.
+→ bạn thấy ngay số dư VNDCoin trong ví thiện nguyện.
+
+2️⃣ Cuối ngày (hoặc khi mạng blockchain rẻ, ít tắc nghẽn):
+→ hệ thống gom tất cả giao dịch trong ngày,
+→ đúc (mint) hoặc đốt (burn) một lần duy nhất on-chain,
+giảm chi phí đến 90–95% so với việc làm từng giao dịch ngay lập tức.
+
+3️⃣ Khi quỹ chi trả, coin được burn công khai kèm minh chứng (hóa đơn, hình ảnh, video, báo cáo...).
+
+💬 Bạn thấy minh bạch, blockchain ghi nhận, mà vẫn tiết kiệm phí.
+
+🌙 ẨN DANH – NHƯNG XÁC THỰC
+
+Người ủng hộ có thể chọn ẩn danh, nhưng hệ thống vẫn xác minh thật qua KYC nội bộ.
+
+Khi hiển thị, bạn chỉ thấy “Người Ẩn Danh #52” hoặc biểu tượng trên bản đồ thiện nguyện.
+
+Hệ thống vẫn chứng minh được đóng góp là hợp lệ, không tiết lộ danh tính.
+
+🧩 “Ẩn danh để khiêm tốn – minh bạch để đáng tin.”
+
+🧠 CÔNG NGHỆ BẢO VỆ NIỀM TIN
+Công nghệ	Vai trò
+Blockchain (Ethereum L2 / Polygon)	Lưu dấu vết giao dịch công khai
+Smart Contract (ERC-20 mở rộng)	Đảm bảo coin chỉ được đúc/burn hợp lệ
+AI Giám sát	Phát hiện hành vi gian lận hoặc mint bất hợp pháp
+KYC + eSignature	Xác thực danh tính người ủng hộ
+Mã hóa AES-256 + SSL	Bảo vệ dữ liệu cá nhân tuyệt đối
+🪶 LỢI ÍCH CHO NGƯỜI DÙNG
+Lợi ích	Mô tả
+💰 Minh bạch tuyệt đối	Mọi đồng tiền đều có hành trình rõ ràng
+🌐 Ai cũng kiểm chứng được	Không phụ thuộc vào tổ chức hay cá nhân
+💎 Tôn vinh người tốt	Nhận NFT chứng nhận lòng tốt, không thể làm giả
+🌙 Ẩn danh xác thực	Bảo vệ người ủng hộ, vẫn đảm bảo tính minh bạch
+🚀 TẦM NHÌN
+
+“Chúng tôi không tạo ra coin để đầu cơ —
+mà là đưa đạo đức và lòng tốt lên blockchain, nơi không thể bị nghi ngờ.”
