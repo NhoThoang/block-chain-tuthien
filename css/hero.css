@@ -135,3 +135,94 @@
   padding: 1rem 2rem;
   border-radius: var(--radius-lg);
 }
+
+/* Buttons: primary and secondary */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+  font-weight: 600;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.06); }
+
+
+/* Hero visual card & stats (restored) */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.card-title {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: white;
+}
+
+.card-content {
+  padding-top: 0.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #FFD700; /* gold */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
