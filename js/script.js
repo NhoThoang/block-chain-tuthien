@@ -48,7 +48,8 @@ const scripts = [
   'js/nav.js',
   'js/hero.js',
   'js/faq.js',
-  'js/contact.js'
+  'js/contact.js',
+  'js/sendmail.js'
 ];
 
 function loadScript(src) {
