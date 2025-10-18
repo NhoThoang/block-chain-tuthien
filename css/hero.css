@@ -5,7 +5,7 @@
   background: var(--gradient-hero);
   display: flex;
   align-items: flex-start;
-  padding-top: 6rem;
+  padding-top: 3rem;
   overflow: visible;
 }
 
@@ -44,7 +44,7 @@
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: flex-start;
   position: relative;
@@ -126,6 +126,7 @@
   gap: 1rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .btn {
@@ -158,8 +159,9 @@
 /* Hero visual card & stats (restored) */
 .hero-visual {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-card {
@@ -167,7 +169,7 @@
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(255,255,255,0.06);
 }
@@ -175,8 +177,9 @@
 .card-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 0.75rem;
+  justify-content: flex-start;
 }
 
 .card-icon {
@@ -186,7 +189,7 @@
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: white;
   font-size: 1.1rem;
 }
@@ -195,6 +198,7 @@
   font-size: var(--font-lg);
   font-weight: 700;
   color: white;
+  text-align: left;
 }
 
 .card-content {
