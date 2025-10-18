@@ -6,7 +6,22 @@
   <title>VNDCoin – Coin Từ Thiện Minh Bạch & Hiện Đại</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Project styles (modular) -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/flow-section.css">
+  <link rel="stylesheet" href="css/flow.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/benefits.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -116,20 +131,40 @@
               <div class="card-title">Blockchain Security</div>
             </div>
             <div class="card-content">
-              <div class="transaction-flow">
+              <div class="transaction-flow" aria-hidden="false">
                 <div class="flow-step">
                   <div class="step-icon">💵</div>
                   <div class="step-text">Nạp VNĐ</div>
                 </div>
                 <div class="flow-arrow">→</div>
+
                 <div class="flow-step">
-                  <div class="step-icon">🪙</div>
-                  <div class="step-text">Mint Coin</div>
+                  <div class="step-icon">⛏️</div>
+                  <div class="step-text">Đúc (Mint)</div>
                 </div>
                 <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                  <div class="step-icon">🎯</div>
+                  <div class="step-text">Quyên góp chiến dịch</div>
+                </div>
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                  <div class="step-icon">💸🔥</div>
+                  <div class="step-text">Giải ngân & Đốt (Burn)</div>
+                </div>
+                <div class="flow-arrow">→</div>
+
                 <div class="flow-step">
                   <div class="step-icon">📜</div>
-                  <div class="step-text">Ghi nhận</div>
+                  <div class="step-text">Ghi nhận minh chứng</div>
+                </div>
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                  <div class="step-icon">🎁</div>
+                  <div class="step-text">Tạo NFT tri ân</div>
                 </div>
               </div>
             </div>
@@ -149,64 +184,135 @@
         </div>
         <h2 class="section-title">Quy trình minh bạch của VNDCoin</h2>
         <p class="section-description">
-          Từ giao dịch off-chain đến on-chain, mọi bước đều được ghi nhận và minh bạch
+          Dựa trên nguyên tắc "Tiền thật — Ghi nhận minh bạch — Đúc on-chain", mỗi bước đều công khai và có tài liệu đối soát.
         </p>
       </div>
-      
+
       <div class="flow-timeline">
         <div class="timeline-line"></div>
         <div class="flow-cards">
           <div class="flow-card" data-step="1">
             <div class="card-number">01</div>
-            <div class="card-icon">
-              <i class="fas fa-money-bill-wave"></i>
-            </div>
-            <h3>Nạp VNĐ</h3>
-            <p>Ghi nhận giao dịch off-chain ngay khi người dùng nạp tiền vào ví nội bộ với tốc độ nhanh chóng.</p>
-            <div class="card-features">
-              <span class="feature-tag">Real-time</span>
-              <span class="feature-tag">Instant</span>
-            </div>
+            <div class="card-icon">💵</div>
+            <h3>Giai đoạn nạp tiền</h3>
+            <p>Người dùng nạp VNĐ qua cổng thanh toán hợp pháp (internet banking, QR, ví điện tử). Tiền chuyển trực tiếp vào tài khoản quỹ đối tác; hệ thống chỉ ghi nhận giao dịch với mã tham chiếu độc nhất.</p>
           </div>
-          
+
           <div class="flow-card" data-step="2">
             <div class="card-number">02</div>
-            <div class="card-icon">
-              <i class="fas fa-coins"></i>
-            </div>
-            <h3>Mint/Burn Off-chain</h3>
-            <p>Giao dịch nội bộ giữa người dùng & quỹ, tối ưu chi phí, nhanh chóng và hiệu quả.</p>
-            <div class="card-features">
-              <span class="feature-tag">Low Cost</span>
-              <span class="feature-tag">Fast</span>
-            </div>
+            <div class="card-icon">🧾</div>
+            <h3>Ghi nhận off-chain</h3>
+            <p>Hệ thống tạo bản ghi VNDCoin tạm thời (off-chain) 1:1 với VNĐ đã gửi. Mỗi bản ghi có coin_id, amount, user_id, reference_bank_tx, chữ ký số và trạng thái verified.</p>
           </div>
-          
+
           <div class="flow-card" data-step="3">
             <div class="card-number">03</div>
-            <div class="card-icon">
-              <i class="fas fa-moon"></i>
-            </div>
-            <h3>Gom & On-chain</h3>
-            <p>Cuối ngày, tổng hợp giao dịch → mint/burn trên blockchain tiết kiệm phí ~90–95%.</p>
-            <div class="card-features">
-              <span class="feature-tag">Batch</span>
-              <span class="feature-tag">Efficient</span>
-            </div>
+            <div class="card-icon">🕓</div>
+            <h3>Chốt giao dịch hằng ngày</h3>
+            <p>Mỗi ngày (ví dụ 23:00 UTC+7) gom toàn bộ giao dịch off-chain, đối soát tự động với dữ liệu ngân hàng và tạo báo cáo minh bạch có checksum.</p>
           </div>
-          
+
           <div class="flow-card" data-step="4">
             <div class="card-number">04</div>
-            <div class="card-icon">
-              <i class="fas fa-file-contract"></i>
-            </div>
-            <h3>Giải ngân minh bạch</h3>
-            <p>Quỹ chi trả người nhận → burn coin kèm bằng chứng công khai trên blockchain.</p>
-            <div class="card-features">
-              <span class="feature-tag">Transparent</span>
-              <span class="feature-tag">Verified</span>
-            </div>
+            <div class="card-icon">⛓️</div>
+            <h3>Đúc coin on-chain (Mint Batch)</h3>
+            <p>Sau khi công bố báo cáo tổng hợp, hệ thống gửi lệnh mint(total_verified_amount) tới smart contract; giao dịch được ký multi-signature và lưu tx_hash, batch_id.</p>
           </div>
+
+          <div class="flow-card" data-step="5">
+            <div class="card-number">05</div>
+            <div class="card-icon">🎯</div>
+            <h3>Ủng hộ / Tạo chiến dịch</h3>
+            <p>Người dùng dùng VNDCoin để ủng hộ chiến dịch đã duyệt hoặc tạo chiến dịch mới (theo KYC). Mỗi campaign có campaign_id, mục tiêu, tiến độ và địa chỉ ví nhận.</p>
+          </div>
+
+          <div class="flow-card" data-step="6">
+            <div class="card-number">06</div>
+            <div class="card-icon">🧾➡️🔥</div>
+            <h3>Hoàn thành chiến dịch — Giải ngân & Burn</h3>
+            <p>Khi chiến dịch hoàn tất, quỹ giải ngân tiền thật tới người nhận, cập nhật bằng chứng công khai và đốt (burn) số VNDCoin tương ứng trên blockchain.</p>
+          </div>
+
+          <div class="flow-card" data-step="7">
+            <div class="card-number">07</div>
+            <div class="card-icon">🎁</div>
+            <h3>Tạo NFT tri ân</h3>
+            <p>Sau khi burn được xác nhận, hệ thống tự động phát hành NFT tri ân (ERC-721/1155) cho người ủng hộ với metadata minh bạch: donor, donation_amount, burn_tx_hash, v.v.</p>
+          </div>
+
+          <div class="flow-card" data-step="8">
+            <div class="card-number">08</div>
+            <div class="card-icon">🔁</div>
+            <h3>Tiếp tục hành trình</h3>
+            <p>Người dùng có thể tiếp tục ủng hộ, giữ NFT như bằng chứng, và hệ thống gợi ý chiến dịch mới dựa trên lịch sử đóng góp.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="transparency-report mt-5" aria-labelledby="transparency-title">
+        <h3 id="transparency-title">Bảng tổng quan dòng tiền & dữ liệu</h3>
+        <p class="muted">Tóm tắt các bước chính và tính công khai của dữ liệu.</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Bước</th>
+                <th>Hoạt động</th>
+                <th>Dạng dữ liệu</th>
+                <th>Công khai / Riêng tư</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Bước">1</td>
+                <td data-label="Hoạt động">Nạp tiền ngân hàng</td>
+                <td data-label="Dạng dữ liệu">Giao dịch ngân hàng</td>
+                <td data-label="Công khai / Riêng tư">Riêng tư</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">2</td>
+                <td data-label="Hoạt động">Ghi nhận off-chain</td>
+                <td data-label="Dạng dữ liệu">Bản ghi nội bộ có chữ ký số</td>
+                <td data-label="Công khai / Riêng tư">Riêng tư</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">3</td>
+                <td data-label="Hoạt động">Chốt & công bố</td>
+                <td data-label="Dạng dữ liệu">Báo cáo minh bạch hằng ngày</td>
+                <td data-label="Công khai / Riêng tư">Công khai</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">4</td>
+                <td data-label="Hoạt động">Mint coin</td>
+                <td data-label="Dạng dữ liệu">Giao dịch blockchain</td>
+                <td data-label="Công khai / Riêng tư">Công khai</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">5</td>
+                <td data-label="Hoạt động">Ủng hộ chiến dịch</td>
+                <td data-label="Dạng dữ liệu">Giao dịch nội bộ / blockchain</td>
+                <td data-label="Công khai / Riêng tư">Công khai (ẩn danh tùy chọn)</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">6</td>
+                <td data-label="Hoạt động">Burn coin</td>
+                <td data-label="Dạng dữ liệu">Giao dịch blockchain</td>
+                <td data-label="Công khai / Riêng tư">Công khai</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">7</td>
+                <td data-label="Hoạt động">Tạo NFT tri ân</td>
+                <td data-label="Dạng dữ liệu">ERC-721 metadata</td>
+                <td data-label="Công khai / Riêng tư">Công khai</td>
+              </tr>
+              <tr>
+                <td data-label="Bước">8</td>
+                <td data-label="Hoạt động">Lưu trữ hồ sơ</td>
+                <td data-label="Dạng dữ liệu">CSDL nội bộ + blockchain</td>
+                <td data-label="Công khai / Riêng tư">Riêng tư / Công khai tùy</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

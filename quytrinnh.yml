@@ -1,0 +1,263 @@
+⚙️ QUY TRÌNH HOẠT ĐỘNG CHI TIẾT – VNDCoin “COIN TỪ THIỆN MINH BẠCH”
+🏦 1️⃣ GIAI ĐOẠN NẠP TIỀN – GỬI ĐẾN NGÂN HÀNG HOẶC QUỸ ĐỐI TÁC UY TÍN
+Mô tả:
+
+Người dùng khi tham gia hệ thống sẽ nạp tiền (VNĐ) thông qua cổng thanh toán hợp pháp (internet banking, QR, hoặc ví điện tử liên kết).
+Khi người dùng xác nhận giao dịch:
+
+Số tiền được chuyển thẳng vào tài khoản ngân hàng của quỹ hoặc tổ chức từ thiện đối tác, không đi qua trung gian hay ví tạm của hệ thống.
+
+Giao dịch được gắn mã tham chiếu duy nhất (transaction_id) để đối chiếu với chứng từ ngân hàng.
+
+Hệ thống ghi nhận giao dịch vào cơ sở dữ liệu nội bộ (off-chain ledger) với các thông tin:
+
+Mã người dùng (user_id)
+
+Số tiền nạp
+
+Thời gian thực hiện
+
+Ngân hàng hoặc đơn vị nhận
+
+Mã xác nhận từ API ngân hàng
+
+Trạng thái xác thực (đã đối soát hay chưa)
+
+Mục tiêu:
+
+Đảm bảo tiền thật luôn ở trong tài khoản kiểm soát bởi tổ chức uy tín
+
+Hệ thống chỉ ghi nhận dữ liệu, không nắm giữ tài sản → đảm bảo tính minh bạch tuyệt đối
+
+💰 2️⃣ GHI NHẬN SỐ DƯ TRÊN VÍ THIỆN NGUYỆN (OFF-CHAIN)
+Mô tả:
+
+Ngay sau khi giao dịch ngân hàng được xác nhận thành công,
+hệ thống sẽ tạo bản ghi VNDCoin tạm thời (off-chain) tương ứng trong ví thiện nguyện của người dùng.
+
+Ví dụ:
+
+Người dùng A nạp 1.000.000 VNĐ
+→ hệ thống tạo 1.000.000 VNDCoin off-chain trong ví A
+
+Mỗi giao dịch off-chain gồm:
+
+coin_id: mã giao dịch duy nhất
+
+amount: số lượng coin
+
+user_id: người sở hữu
+
+reference_bank_tx: mã giao dịch ngân hàng thật
+
+digital_signature: chữ ký số để đảm bảo không thể giả mạo
+
+verified: trạng thái xác minh
+
+Đặc điểm:
+
+Coin off-chain có giá trị tương đương 1:1 với VNĐ thật đã gửi.
+
+Người dùng thấy ngay số dư trong ví thiện nguyện qua dashboard hoặc app.
+
+Có thể dùng VNDCoin này ngay để quyên góp cho chiến dịch, hoặc giữ lại trong ví để tham gia sau.
+
+Lợi ích:
+
+Tốc độ giao dịch tức thì (không cần đợi blockchain xác nhận)
+
+Tiết kiệm chi phí gas
+
+Dễ dàng gom nhiều giao dịch nhỏ trước khi đúc coin thật on-chain
+
+🕓 3️⃣ CHỐT GIAO DỊCH HẰNG NGÀY – TỔNG HỢP & CÔNG BỐ MINH BẠCH
+Mô tả:
+
+Vào thời điểm định sẵn mỗi ngày (ví dụ: 23:00 UTC+7), hệ thống thực hiện:
+
+Gom toàn bộ giao dịch off-chain trong 24h qua.
+
+Kiểm tra xác thực từng giao dịch với dữ liệu ngân hàng (đối soát tự động).
+
+Tính tổng số tiền đã xác thực (total_verified_amount).
+
+Tạo báo cáo công khai “Bảng minh bạch hằng ngày” gồm:
+
+Danh sách giao dịch (ẩn danh nếu người dùng chọn)
+
+Số tiền của từng người
+
+Tổng cộng
+
+Giờ chốt sổ
+
+Mã checksum đảm bảo không thể sửa sau khi công bố
+
+Dữ liệu báo cáo này được lưu vào IPFS hoặc blockchain phụ để không thể chỉnh sửa.
+
+Mục tiêu:
+
+Minh bạch hóa toàn bộ dòng tiền mỗi ngày
+
+Cộng đồng có thể kiểm tra bảng chốt sổ và đối chiếu khi cần
+
+Cung cấp nguồn dữ liệu chính xác để đúc coin thật on-chain
+
+⛓️ 4️⃣ ĐÚC COIN TRÊN BLOCKCHAIN (ON-CHAIN MINTING)
+Mô tả:
+
+Sau khi bảng tổng hợp được công bố, hệ thống sẽ thực hiện “Mint Batch” — tức là đúc một lần tất cả số VNDCoin tương ứng với tổng tiền thật đã được xác nhận trong ngày.
+
+Quá trình này:
+
+Gửi lệnh mint(total_verified_amount) đến smart contract ERC-20 mở rộng.
+
+Giao dịch được ký bởi khóa ví quản trị (multi-signature) để tránh gian lận.
+
+Sau khi blockchain xác nhận, tổng số VNDCoin on-chain sẽ phản ánh chính xác lượng tiền thật đã nạp.
+
+Mỗi lần mint có:
+
+tx_hash: mã giao dịch blockchain
+
+batch_id: mã phiên đúc
+
+timestamp
+
+amount
+
+reference_report_id: liên kết với bảng minh bạch của ngày đó
+
+Mục tiêu:
+
+Đảm bảo mọi VNDCoin on-chain đều có đối ứng bằng tiền thật
+
+Dễ dàng truy vết nguồn gốc từng đợt coin
+
+🎯 5️⃣ NGƯỜI DÙNG ỦNG HỘ HOẶC TẠO CHIẾN DỊCH THIỆN NGUYỆN
+Mô tả:
+
+Người dùng có thể sử dụng VNDCoin (on-chain hoặc off-chain) để:
+
+Ủng hộ các chiến dịch thiện nguyện đã được duyệt sẵn
+
+Hoặc tự tạo chiến dịch mới (nếu đủ điều kiện KYC & xác thực quỹ thụ hưởng)
+
+Mỗi chiến dịch có:
+
+campaign_id
+
+Tên & mô tả chiến dịch
+
+Mục tiêu quyên góp (target_amount)
+
+Thời gian bắt đầu – kết thúc
+
+Ảnh minh họa, video giới thiệu
+
+Địa chỉ ví quỹ nhận giải ngân
+
+Bảng theo dõi tiến độ
+
+Người dùng có thể:
+
+Quyên góp trực tiếp bằng VNDCoin từ ví
+
+Theo dõi tiến độ (bao nhiêu % đạt target, bao nhiêu người đã ủng hộ)
+
+Bình luận, chia sẻ chiến dịch lên mạng xã hội
+
+🧾 6️⃣ KHI CHIẾN DỊCH HOÀN THÀNH – GIẢI NGÂN & ĐỐT COIN (BURN)
+Mô tả:
+
+Khi chiến dịch:
+
+Đạt đủ số tiền mục tiêu, hoặc
+
+Hết thời gian quyên góp,
+
+→ hệ thống sẽ tự động chuyển sang trạng thái “đóng nhận quyên góp” cho chiến dịch đó.
+→ Những chiến dịch khác vẫn tiếp tục nhận tiền bình thường.
+
+Tiếp theo, quy trình gồm:
+
+Giải ngân tiền thật: chuyển tiền từ tài khoản ngân hàng/quỹ đối tác đến người hoặc tổ chức thụ hưởng.
+
+Cập nhật minh chứng công khai:
+
+Ảnh, video, hóa đơn, chứng từ
+
+Mã giao dịch ngân hàng
+
+Bản xác nhận từ đơn vị nhận
+
+Đốt coin on-chain (burn):
+
+Số VNDCoin tương ứng với số tiền giải ngân được gửi đến địa chỉ 0x000...dead
+
+Giao dịch burn được ghi lại và gắn với campaign_id
+
+Kết quả:
+
+Blockchain ghi nhận “chiến dịch đã hoàn thành”
+
+Tổng lượng VNDCoin giảm tương ứng
+
+Mọi người đều có thể xem lịch sử burn để kiểm chứng.
+
+🎁 7️⃣ TẠO NFT TRI ÂN SAU KHI BURN
+Mô tả:
+
+Sau khi chiến dịch hoàn tất và lệnh burn được xác nhận trên blockchain,
+hệ thống tự động tạo NFT tri ân cho từng người ủng hộ.
+
+NFT được phát hành theo tiêu chuẩn ERC-721 (hoặc ERC-1155)
+và chứa metadata bao gồm:
+
+Trường	Nội dung
+donor_name	Tên hoặc mã ẩn danh của người ủng hộ
+donation_amount	Số tiền (VNDCoin / VNĐ) đã quyên góp
+campaign_name	Tên chiến dịch
+campaign_id	Mã định danh chiến dịch
+donation_time	Thời điểm quyên góp
+burn_tx_hash	Liên kết đến giao dịch đốt coin trên blockchain
+image_url	Ảnh hoặc biểu tượng cảm ơn
+signature	Chữ ký số xác thực của hệ thống
+Cách hoạt động:
+
+NFT được đúc và gửi trực tiếp đến ví blockchain của người ủng hộ.
+
+Nếu người ủng hộ chưa có ví, hệ thống tạo NFT lưu ký (custodial NFT) trong hồ sơ của họ.
+
+Người dùng có thể xem NFT trong ứng dụng hoặc chuyển nó về ví cá nhân (MetaMask, TrustWallet…).
+
+NFT này không thể giao dịch lại, chỉ có giá trị tinh thần và minh chứng.
+
+Ý nghĩa:
+
+Mỗi NFT là “Chứng nhận lòng tốt” – minh chứng công khai cho hành động thiện nguyện.
+
+Có thể chia sẻ lên mạng xã hội, xuất hiện trên hồ sơ cá nhân trong hệ thống.
+
+Là nền tảng để xây dựng hệ thống “xếp hạng thiện nguyện” hoặc “Hall of Kindness”.
+
+✅ 8️⃣ TIẾP TỤC HÀNH TRÌNH THIỆN NGUYỆN
+
+Sau khi nhận NFT tri ân:
+
+Người dùng có thể nạp thêm tiền để tiếp tục tạo hoặc ủng hộ chiến dịch mới.
+
+NFT cũ vẫn tồn tại như bằng chứng vĩnh viễn về các hoạt động đã thực hiện.
+
+Hệ thống có thể gợi ý chiến dịch mới dựa trên sở thích hoặc lịch sử quyên góp.
+
+📊 TỔNG QUAN DÒNG TIỀN & DỮ LIỆU
+Bước	Hoạt động	Dạng dữ liệu	Công khai hay riêng tư
+1	Nạp tiền ngân hàng	Giao dịch ngân hàng	Riêng tư
+2	Ghi nhận off-chain	Bản ghi nội bộ có chữ ký số	Riêng tư
+3	Chốt & công bố	Báo cáo minh bạch hằng ngày	Công khai
+4	Mint coin	Giao dịch blockchain	Công khai
+5	Ủng hộ chiến dịch	Giao dịch nội bộ hoặc blockchain	Công khai (ẩn danh tuỳ chọn)
+6	Burn coin	Giao dịch blockchain	Công khai
+7	Tạo NFT cảm ơn	ERC-721 metadata	Công khai
+8	Lưu trữ hồ sơ thiện nguyện	CSDL nội bộ + blockchain	Riêng tư/công khai tùy chọn
