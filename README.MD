@@ -125,9 +125,9 @@ VNDCoin hướng tới:
 
 ## 📎 Liên hệ & Tham gia
 
-📧 **Email:** contact@vndcoin.org *(sẽ kích hoạt khi ra mắt bản alpha)*  
-🌐 **Website & Explorer:** *coming soon*  
-🔗 **GitHub:** *private repo until audit complete*
+📧 **Email:** nguyennhothoang@gmail.com *(sẽ kích hoạt khi ra mắt bản alpha)*  
+🌐 **Website & Explorer:** *[coming soon](https://nhothoang.github.io/block-chain-tuthien/#flow)*  
+🔗 **GitHub:** *[private repo until audit complete](https://github.com/NhoThoang/block-chain-tuthien)*
 
 ---
 
